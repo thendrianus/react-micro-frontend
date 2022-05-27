@@ -30,7 +30,7 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin(
       {
-        name: 'MFE1',
+        name: 'myApp1',
         filename:
           'remoteEntry.js',
         exposes: {
@@ -38,8 +38,8 @@ module.exports = {
             './src/Button',
         },
         remotes: {
-          MFE2:
-            'MFE2@http://localhost:8082/remoteEntry.js',
+          myApp2:
+            'myApp2@http://localhost:8082/remoteEntry.js',
         }
       }
     ),
